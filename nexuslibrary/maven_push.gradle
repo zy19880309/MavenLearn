@@ -1,0 +1,14 @@
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.version = VERSION
+            pom.artifactId = ARTIFACT_ID
+            pom.groupId = GROUP_ID
+            repository(url: RELEASE_URL) {
+                authentication(userName: NAME, password: PASSWORD) // maven授权信息
+            }
+        }
+    }
+}
