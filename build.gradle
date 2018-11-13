@@ -5,11 +5,19 @@ buildscript {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'https://dl.bintray.com/zy19880219/mavenlearn'//'http://localhost:8081/repository/ZHANGYONG/'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.1.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:latest.integration'
 
+        classpath "com.github.dcendents:android-maven-gradle-plugin:latest.integration"
+//        classpath 'com.novoda:bintray-release:0.8.0'
+//        classpath 'org.greenrobot:greendao-gradle-plugin:3.2.2'
+//        classpath 'com.novoda:bintray-release:0.5.0'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -19,6 +27,17 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'https://dl.bintray.com/zy19880219/mavenlearn'//'http://localhost:8081/repository/ZHANGYONG/'
+        }
+    }
+    tasks.withType(Javadoc) {
+        options {
+            encoding "UTF-8"
+            charSet 'UTF-8'
+            links "http://docs.oracle.com/javase/7/docs/api"
+        }
+
     }
 }
 

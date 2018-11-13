@@ -1,1 +1,1 @@
-include ':app', ':nexuslibrary', ':locallibrary'
+include ':app', ':nexuslibrary', ':locallibrary', ':bintraylibrary'
